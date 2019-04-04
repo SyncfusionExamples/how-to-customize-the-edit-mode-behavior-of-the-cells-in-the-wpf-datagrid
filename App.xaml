@@ -1,0 +1,15 @@
+﻿<Application x:Class="DataGrid.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+       <!--Custom Style-->
+        <Style x:Key="style1" TargetType="syncfusion:VirtualizingCellsControl">
+            <Setter Property="Background" Value="Pink"/>
+        </Style>
+        <Style x:Key="style2" TargetType="syncfusion:VirtualizingCellsControl">
+            <Setter Property="Background" Value="Beige"/>
+        </Style>
+    </Application.Resources>
+</Application>
