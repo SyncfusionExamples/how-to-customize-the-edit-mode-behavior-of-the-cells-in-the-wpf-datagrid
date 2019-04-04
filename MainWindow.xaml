@@ -1,0 +1,33 @@
+﻿<Window x:Class="DataGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
+        xmlns:local="clr-namespace:DataGrid" 
+        Title="MainWindow"
+        Height="350" >
+
+    <Window.DataContext>
+        <local:StudentCollection />
+    </Window.DataContext>
+
+    <Grid>
+
+        <local:SfDataGridExt x:Name="grid"
+                           ItemsSource="{Binding Students}"
+                           AllowResizingColumns="True"
+                           AllowResizingHiddenColumns="False"
+                           AllowDraggingColumns="True" 
+                           GridValidationMode="InView"
+                           AutoGenerateColumns="False"                          
+                           AllowEditing="True">
+
+            <local:SfDataGridExt.Columns>
+                <syncfusion:GridTextColumn HeaderText="Id" MappingName="Id"/>
+                <syncfusion:GridTextColumn HeaderText="Name" MappingName="Name" TextWrapping="Wrap"  />
+                <syncfusion:GridNumericColumn HeaderText="Salary" MappingName="Salary"     />
+                <syncfusion:GridNumericColumn HeaderText="GradePoint Average" MappingName="GradePointAverage" />
+            </local:SfDataGridExt.Columns>
+
+        </local:SfDataGridExt >
+    </Grid>
+</Window>
