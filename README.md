@@ -2,14 +2,14 @@
 
 This example demonstrates how to customize edit mode behavior of GridCell in [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) (SfDataGrid).
 
-In DataGrid, you can directly go to the edit mode in GridCell by pressing any letter or digit as an input from the keyboard.
+In **DataGrid**, you can directly go to the edit mode in **GridCell** by pressing any letter or digit as an input from the keyboard.
 
-By default, DataGrid does not allow the GridCell to go to edit mode while pressing the Minus (-) key or any special character. You can overcome this behavior by customizing the SfDataGrid class, and overriding its OnTextInput method.
+By default, DataGrid does not allow the GridCell to go to edit mode while pressing the Minus (-) key or any special character. You can overcome this behavior by customizing the `SfDataGrid` class, and overriding its `OnTextInput` method.
 
 **Note:**
-By default, GridTemplateColumn goes to edit mode while pressing the F2 key when you load the EditTemplate for it. No other letters or digits allow edit mode for GridTemplateColumn, GridCheckBoxColumn, GridImageColumn, GridHyperlinkColumn and GridUnboundColumn.
+By default, **GridTemplateColumn** goes to edit mode while pressing the F2 key when you load the EditTemplate for it. No other letters or digits allow edit mode for GridTemplateColumn, GridCheckBoxColumn, GridImageColumn, GridHyperlinkColumn and GridUnboundColumn.
 
-The following code example illustrates how to override the SfDataGrid class and customize the editing behavior in OnTextInput method.
+The following code example illustrates how to override the `SfDataGrid` class and customize the editing behavior in `OnTextInput` method.
 
 #### C#
 
@@ -45,11 +45,11 @@ public class SfDataGridExt : SfDataGrid
 }
 ```
 
-In the above code example, the OnTextInput method is fired when the input is received from the keyboard for Grid Column's cell. With the help of CurrentRowColumnIndex in CurrentCellManager of SelectionController, you can get the current column from VisibleColumns collection that receives the input from keyboard.
+In the above code example, the `OnTextInput` method is fired when the input is received from the keyboard for Grid Column's cell. With the help of **CurrentRowColumnIndex** in **CurrentCellManager** of **SelectionController**, you can get the current column from VisibleColumns collection that receives the input from keyboard.
 
-The editing is skipped when the current column is GridTemplateColumn and it is already in edit mode. With the existing condition, you need to include the condition to allow negative number also.
+The editing is skipped when the current column is **GridTemplateColumn** and it is already in edit mode. With the existing condition, you need to include the condition to allow negative number also.
 
-The above customized SfDataGrid should be loaded in XAML for implementing the editing behavior in GridCell. Refer the following code example.
+The above customized **SfDataGrid** should be loaded in XAML for implementing the editing behavior in GridCell. Refer the following code example.
 
 #### XAML
 
